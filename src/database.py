@@ -9,3 +9,7 @@ engine = sql.create_engine(
     SQLACLHEMY_DATABASE_URL, connection_args={"check_same_thread":false}
 )
 
+Sessionlocal = orm.session(autocommit=false, autoflash=false, bind=engine)
+
+Base = declarative.declarative_base()
+
